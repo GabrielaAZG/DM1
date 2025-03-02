@@ -14,7 +14,7 @@ export default function NavigationStack(){
         //Maneja las navegaciones
         <Stack.Navigator initialRouteName="Login">
             <Stack.Screen name="Login" component={Login}/>
-            <Stack.Screen name="Principal" component={PrincipalMenu}/> 
+            <Stack.Screen name="HOME" component={PrincipalMenu}/> 
             <Stack.Screen name="Customer" component={Customer}/> 
             <Stack.Screen name="Order" component={Order}/> 
             <Stack.Screen name="Menu" component={Menu}/> 

@@ -1,10 +1,10 @@
 import React, {useState} from "react";
-import {View, Text, TextInput, Button, SafeAreaView, Image, StyleSheet, Alert, Platform, BackHandler} from "react-native";
+import {View, Text, TextInput, Button, SafeAreaView, Image, StyleSheet, Alert, Platform, BackHandler,TouchableOpacity, ImageBackground} from "react-native";
 
 export default function Login(props){
     const {navigation} = props;
     const users = ["gaby", "alison", "ramon"]
-    const passwords = ["contrasena1", "contrasena2", "contrasena3"]
+    const passwords = ["contrasena1", "1234", "contrasena3"]
 
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
@@ -20,7 +20,7 @@ export default function Login(props){
         }
 
         if (isAuthenticated) {
-            navigation.replace("Principal"); 
+            navigation.replace("HOME"); 
         } else {
             Alert.alert("ERROR", "Incorrect username or password"); 
         }
@@ -41,30 +41,118 @@ export default function Login(props){
 
     return(
         <SafeAreaView>
-            <Text>WELCOME TO PIZZERIA TECNM</Text>
+            <ImageBackground source={require('../../assets/Login.jpg')} style={styles.backgroundImage}>
+            
+            <View style={styles.container} >
+                <TextInput style={styles.input} placeholder="USER" value= {user} onChangeText={setUser}/>
+                <TextInput style={styles.inputp} placeholder="PASSWORD" value= {password} onChangeText={setPassword}/>
+                
+            </View>
+            <View style={styles.container}>
+                <TouchableOpacity style={styles.button} onPress={authentication}>
+                    <Text>LOGIN</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button} onPress={exitApp}>
+                    <Text>EXIT</Text>
+                </TouchableOpacity>
+              
+            
+            </View>
             <Image 
                 source={require('../../assets/pizza.png')}
                 style={styles.image}
             />
-            <Text>LOGIN</Text>
-            <TextInput placeholder="USER" value= {user} onChangeText={setUser}/>
-            <TextInput placeholder="PASSWORD" value= {password} onChangeText={setPassword}/>
-            <Button title="LOGIN" onPress={authentication}/>
-            <Button title="EXIT" onPress={exitApp}/>
-            
-            
-        </SafeAreaView>
+        </ImageBackground>
+             
+    </SafeAreaView>
     )
 }
 
 
 const styles = StyleSheet.create({
+    backgroundImage: {
+        flex: 1,
+        resizeMode: 'cover', // Ajusta la imagen para cubrir toda la pantalla
+        justifyContent: 'center',
+         
+        height: '175%'
+      },
     image: {
         width: 125, 
         height: 125,
         marginBottom: 20
 
-    }
+    },
+    TexView:{
+        justifyContent:'center',
+        fontSize:30,
+        textAlign:'center' 
+    },
+    title:{
+        justifyContent:'center',
+        fontSize:25,
+        textAlign:'center',
+        marginTop:10 
+    },
+    input:{
+        width:300,
+        height: 40,
+        fontSize: 20,
+        borderWidth:1,
+        borderColor: '#ccc',
+        borderRadius:5,
+        padding:10,
+        marginTop: 240,
+        marginBottom:10,
+        justifyContent:'space-around',
+        alignContent:'center',
+        backgroundColor:'white'
+    },
+    inputp:{
+        width:300,
+        height: 40,
+        fontSize: 20,
+        borderWidth:1,
+        borderColor: '#ccc',
+        borderRadius:5,
+        padding:10,
+        marginTop: 1,
+        marginBottom:15,
+        justifyContent:'space-around',
+        alignContent:'center',
+        backgroundColor:'white'
+    },
+    inputText:{
+
+    },
+    container:{
+        justifyContent:'flex-end',
+        alignItems:'center', 
+        paddingBottom:1
+    },
+    button: {
+        backgroundColor: 'red',
+        paddingVertical: 10,
+        paddingHorizontal: 15,
+        borderRadius: 5,
+        borderWidth: 0, // Ancho del borde
+        borderColor: 'black', // Color del borde
+        shadowColor: '#000', // Sombra para mejorar visibilidad en iOS
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.5,
+        shadowRadius: 2,
+        elevation: 2,
+        marginTop:10,
+        alignItems:'center',
+        marginEnd:30
+      },
+      buttonText: {
+        color: 'white',
+        fontSize: 16,
+      },
+      containerinput:{
+        marginTop:30
+      }
 });
 
 
