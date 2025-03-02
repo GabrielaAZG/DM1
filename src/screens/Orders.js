@@ -2,12 +2,12 @@ import React, {useContext} from "react";
 import {View, Text, TextInput, Button, SafeAreaView, Image, StyleSheet, Alert, Platform} from "react-native";
 import { OrderContext } from './OrderContext';
 
-export default function Orders(props){
+export default function Orders({navigation}){
     
     const { orders } = useContext(OrderContext);
 
     
-    const {navigation} = props;
+    //const {navigation} = props;
 
     const goToLogin = () => {
         navigation.reset({
