@@ -1,5 +1,5 @@
 import React, {useState, useContext} from "react";
-import {View, Text, TextInput, Button, SafeAreaView, Image, StyleSheet, Alert, Platform,TouchableOpacity} from "react-native";
+import {View, Text, TextInput, Button, SafeAreaView, Image, StyleSheet, Alert, Platform,TouchableOpacity,ImageBackground} from "react-native";
 import { OrderContext } from './OrderContext';
 import { Dropdown } from "react-native-element-dropdown";
 
@@ -58,8 +58,9 @@ export default function Order(props){
     
 
     return(
+        <ImageBackground  style={styles.backgroundImage} source={require('../../assets/3.png')}>
         <SafeAreaView>
-            <Text>ORDER</Text>
+            
             <View style={styles.container}>
             <Dropdown
                 style={styles.dropdown}
@@ -110,11 +111,18 @@ export default function Order(props){
             
             
         </SafeAreaView>
+        </ImageBackground>
     )
 }
 
 
 const styles = StyleSheet.create({
+    backgroundImage: {
+        flex: 1,
+        resizeMode: 'cover', // Ajusta la imagen para cubrir toda la pantalla
+        justifyContent: 'center', 
+        height: '100%'
+      },
     image: {
         width: 125, 
         height: 125,
@@ -129,12 +137,13 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         paddingHorizontal: 10,
         backgroundColor: 'white',
-        marginBottom: 20,
+        marginBottom: 30,
+        marginTop:10,
         alignItems:'center'
       },
       container:{
          alignItems:'center',
-         marginTop:100
+         marginTop:190
       },
       button:{
         backgroundColor: 'red',
@@ -154,7 +163,7 @@ const styles = StyleSheet.create({
       },
       buttoncontainer:{
         alignItems:'center',
-         marginTop:10
+         marginTop:40
       },
       Textbutton:{
         color:'white',
@@ -172,7 +181,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.5,
         shadowRadius: 2,
         elevation: 2,
-        marginTop:300,
+        marginTop:70,
         alignItems:'center',
         marginEnd:-280
       }

@@ -73,8 +73,7 @@ const styles = StyleSheet.create({
     backgroundImage: {
         flex: 1,
         resizeMode: 'cover', // Ajusta la imagen para cubrir toda la pantalla
-        justifyContent: 'center',
-         
+        justifyContent: 'center', 
         height: '120%'
       },
     image: {

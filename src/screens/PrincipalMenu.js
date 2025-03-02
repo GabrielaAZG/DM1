@@ -1,5 +1,5 @@
 import React from "react";
-import {View, Text, TextInput, Button, SafeAreaView, Image, StyleSheet, Alert, Platform, BackHandler,TouchableOpacity} from "react-native";
+import {View, Text, TextInput, Button, SafeAreaView, Image, StyleSheet, Alert, Platform, BackHandler,TouchableOpacity,ImageBackground} from "react-native";
 
 export default function PrincipalMenu(props){
     //console.log(props);
@@ -22,12 +22,11 @@ export default function PrincipalMenu(props){
     }
     
     return(
+        <ImageBackground  style={styles.backgroundImage} source={require('../../assets/2.png')}>
         <SafeAreaView>
-            
-            <Text>HOME</Text>
 
             <View style={styles.container}>
-                <TouchableOpacity style={styles.button} onPress={goToOrder}>
+                <TouchableOpacity style={styles.buttoni} onPress={goToOrder}>
                     <Text style={styles.buttonText}>Employee</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button} onPress={goToCustomer}>
@@ -44,17 +43,25 @@ export default function PrincipalMenu(props){
             
             
         </SafeAreaView>
+        </ImageBackground>
     )
 }
 
 
 const styles = StyleSheet.create({
+    backgroundImage: {
+        flex: 1,
+        resizeMode: 'cover', // Ajusta la imagen para cubrir toda la pantalla
+        justifyContent: 'center', 
+        height: '100%'
+      },
     image: {
         width: 125, 
         height: 125,
         marginBottom: 20
 
     },
+    
     container:{
         justifyContent:'space-around',
         alignItems:'center', 
@@ -65,16 +72,32 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         paddingHorizontal: 35,
         borderRadius: 5,
-        borderWidth: 0, // Ancho del borde
-        borderColor: 'black', // Color del borde
+        borderWidth: 2, // Ancho del borde
+        borderColor: 'orange', // Color del borde
         shadowColor: '#000', // Sombra para mejorar visibilidad en iOS
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.5,
         shadowRadius: 2,
         elevation: 2,
-        marginTop:100,
+        marginTop:60,
         alignItems:'center',
-        marginEnd:30
+        marginEnd:0
+      },
+      buttoni: {
+        backgroundColor: 'red',
+        paddingVertical: 10,
+        paddingHorizontal: 35,
+        borderRadius: 5,
+        borderWidth: 2, // Ancho del borde
+        borderColor: 'orange', // Color del borde
+        shadowColor: '#000', // Sombra para mejorar visibilidad en iOS
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.5,
+        shadowRadius: 2,
+        elevation: 2,
+        marginTop:-30,
+        alignItems:'center',
+        marginEnd:0
       },
       buttonText: {
         color: 'white',
