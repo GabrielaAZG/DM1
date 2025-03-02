@@ -40,8 +40,9 @@ export default function Login(props){
 
 
     return(
+        <ImageBackground  style={styles.backgroundImage} source={require('../../assets/Login.jpg')}>
         <SafeAreaView>
-            <ImageBackground source={require('../../assets/Login.jpg')} style={styles.backgroundImage}>
+            
             
             <View style={styles.container} >
                 <TextInput style={styles.input} placeholder="USER" value= {user} onChangeText={setUser}/>
@@ -55,16 +56,15 @@ export default function Login(props){
                 <TouchableOpacity style={styles.button} onPress={exitApp}>
                     <Text>EXIT</Text>
                 </TouchableOpacity>
-              
-            
             </View>
             <Image 
                 source={require('../../assets/pizza.png')}
                 style={styles.image}
             />
+        </SafeAreaView>
         </ImageBackground>
              
-    </SafeAreaView>
+    
     )
 }
 
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         resizeMode: 'cover', // Ajusta la imagen para cubrir toda la pantalla
         justifyContent: 'center',
          
-        height: '175%'
+        height: '120%'
       },
     image: {
         width: 125, 
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         borderColor: '#ccc',
         borderRadius:5,
         padding:10,
-        marginTop: 240,
+        marginTop: 20,
         marginBottom:10,
         justifyContent:'space-around',
         alignContent:'center',
