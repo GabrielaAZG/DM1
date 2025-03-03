@@ -68,10 +68,10 @@ const styles = StyleSheet.create({
         paddingBottom:10
     },
     button: {
-        backgroundColor: 'red',
+        backgroundColor: 'white',
         paddingVertical: 10,
         paddingHorizontal: 35,
-        borderRadius: 5,
+        borderRadius: 100,
         borderWidth: 2, // Ancho del borde
         borderColor: 'orange', // Color del borde
         shadowColor: '#000', // Sombra para mejorar visibilidad en iOS
@@ -84,11 +84,11 @@ const styles = StyleSheet.create({
         marginEnd:0
       },
       buttoni: {
-        backgroundColor: 'red',
+        backgroundColor: 'white',
         paddingVertical: 10,
         paddingHorizontal: 35,
-        borderRadius: 5,
-        borderWidth: 2, // Ancho del borde
+        borderRadius: 100,
+        borderWidth: 1, // Ancho del borde
         borderColor: 'orange', // Color del borde
         shadowColor: '#000', // Sombra para mejorar visibilidad en iOS
         shadowOffset: { width: 0, height: 2 },
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
         marginEnd:0
       },
       buttonText: {
-        color: 'white',
+        color: 'black',
         fontSize: 25,
       }
 });

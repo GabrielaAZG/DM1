@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import {View, Text, TextInput, Button, SafeAreaView, Image, StyleSheet, Alert, Platform,ImageBackground} from "react-native";
+import {View, Text, TextInput, Button, SafeAreaView, Image, StyleSheet, Alert, Platform,ImageBackground,TouchableOpacity} from "react-native";
 import { OrderContext } from './OrderContext';
 
 export default function Orders({navigation}){
@@ -20,7 +20,7 @@ export default function Orders({navigation}){
         <SafeAreaView>
             <View style={styles.orderItem}>
             {orders.length === 0 ? (
-                <Text style={styles.text}>There are no orders</Text>
+                <Text style={styles.text}> There are no orders</Text>
             ) : (
                 orders.map((order, index) => (
                     <View key={index} style={styles.orderItem}>
@@ -33,8 +33,12 @@ export default function Orders({navigation}){
             </View>
 
             
+            <View style={styles.container} >
+                <TouchableOpacity style={styles.buttonexit} onPress={goToLogin}>
+                    <Text style={styles.Textbutton}>E X I T</Text>
+                </TouchableOpacity>
+            </View>
 
-            <Button title="EXIT" onPress={goToLogin} />
         </SafeAreaView>
         </ImageBackground>
     )
@@ -56,9 +60,35 @@ const styles = StyleSheet.create({
         color: 'white'
     },
     text:{
-        color:'white',
+        color:'black',
         fontSize:20
-    }
+    },
+    buttonexit:{
+        backgroundColor: 'white',
+        paddingVertical: 29,
+        paddingHorizontal: 15,
+        borderRadius: 100,
+        borderWidth: 0, // Ancho del borde
+        borderColor: 'black', // Color del borde
+        shadowColor: '#000', // Sombra para mejorar visibilidad en iOS
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.5,
+        shadowRadius: 2,
+        elevation: 2,
+        marginTop:500,
+        alignItems:'center',
+        marginEnd:-280
+      },
+      container:{
+        justifyContent:'space-around',
+        alignItems:'center', 
+        paddingBottom:10,
+        marginTop:-130
+    },
+    Textbutton:{
+        color:'black',
+        fontSize:16
+      },
 });
 
 
