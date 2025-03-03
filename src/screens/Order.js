@@ -11,22 +11,25 @@ export default function Order(props){
     const [amount, setAmount] = useState('');
 
     const datatype = [
-        { label: 'Pepperoni', value: 'pepperoni' },
-        { label: 'Hawaiana', value: 'hawaiana' },
-        { label: 'Cuatro Quesos', value: 'cuatro_quesos' },
-        { label: 'Vegetariana', value: 'vegetariana' },
-        { label: 'Mexicana', value: 'mexicana' }
+        { label: 'Pepperoni', value: 'Pepperoni' },
+        { label: 'Hawaiana', value: 'Hawaiana' },
+        { label: 'Four Cheeses', value: 'Four Cheeses' },
+        { label: 'Vegetariana', value: 'Vegetarian' },
+        { label: 'Mexicana', value: 'Mexicana' }
     ]
     const datasize=[
-        {label:'Extra Big',value:'big'},
-        {label:'Big',value:'big'},
+        {label:'Extra Big',value:'Extra big'},
+        {label:'Big',value:'Big'},
         {label:'Medium',value:'Medium'},
         {label:'Small',value:'Small'},
     ]
     const dataamount=[
         {label:'1',value:'1'},
-        {label:'2',value:'3'},
-        {label:'4',value:'Medium'},
+        {label:'2',value:'2'},
+        {label:'3',value:'3'},
+        {label:'4',value:'4'},
+        {label:'5',value:'5'},
+        {label:'6',value:'6'},
         {label:'7',value:'7'},
         {label:'8',value:'8'},
         {label:'9',value:'9'},
@@ -67,7 +70,7 @@ export default function Order(props){
                 data={datatype}
                 labelField="label"
                 valueField="value"
-                placeholder="Selecciona una opción"
+                placeholder="Select a type of pizza"
                 value={type}
                 onChange={item => setType(item.value)}
             />
@@ -76,7 +79,7 @@ export default function Order(props){
                 data={datasize}
                 labelField="label"
                 valueField="value"
-                placeholder="Selecciona una opción"
+                placeholder="Select a pizza size"
                 value={size}
                 onChange={item => setSize(item.value)}
             />
@@ -85,7 +88,7 @@ export default function Order(props){
                 data={dataamount}
                 labelField="label"
                 valueField="value"
-                placeholder="Selecciona una opción"
+                placeholder="Select a amount"
                 value={amount}
                 onChange={item => setAmount(item.value)}
             />

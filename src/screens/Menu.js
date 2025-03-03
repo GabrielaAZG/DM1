@@ -19,14 +19,14 @@ export default function Menu(props){
                 </View>
                  
                 <View style={styles.container2}>
-                <Text style={styles.textarea}>Pepperoni......................$179.00 MXN</Text>
-                <Text style={styles.textarea}>Hawaiana......................$199.00 MXN</Text>
-                <Text style={styles.textarea}>Cuatro Quesos..............$219.00 MXN</Text>
-                <Text style={styles.textarea}>Vegetariana..................$199.00 MXN</Text>
-                <Text style={styles.textarea}>Mar y Tierra.................$289.00 MXN</Text>
-                <Text style={styles.textarea}>Mexicana.....................$219.00 MXN</Text>
-                <Text style={styles.textarea}>BBQ Chicken................$229.00 MXN</Text>
-                <Text style={styles.textarea}>Pizza de Pesto...............$229.00 MXN</Text>
+                <Text style={styles.textarea}>Pepperoni....................................$8.99</Text>
+                <Text style={styles.textarea}>Hawaiana.....................................$9.99</Text>
+                <Text style={styles.textarea}>Cuatro Quesos..........................$10.99</Text>
+                <Text style={styles.textarea}>Vegetariana...............................$12.99</Text>
+                <Text style={styles.textarea}>Mar y Tierra...............................$13.99</Text>
+                <Text style={styles.textarea}>Mexicana.....................................$9.99</Text>
+                <Text style={styles.textarea}>BBQ Chicken.............................$10.99</Text>
+                <Text style={styles.textarea}>Pizza de Pesto..........................$15.99</Text>
                 
                 </View>
                 <View style={styles.buttoncontainer}>

@@ -57,10 +57,7 @@ export default function Login(props){
                     <Text>EXIT</Text>
                 </TouchableOpacity>
             </View>
-            <Image 
-                source={require('../../assets/pizza.png')}
-                style={styles.image}
-            />
+
         </SafeAreaView>
         </ImageBackground>
              
