@@ -20,6 +20,10 @@ export default function PrincipalMenu(props){
             routes: [{ name: "Login" }], 
         });
     }
+    const goToUs = () => {
+        navigation.navigate("US");
+    }
+
     
     return(
         <ImageBackground  style={styles.backgroundImage} source={require('../../assets/2.png')}>
@@ -32,7 +36,7 @@ export default function PrincipalMenu(props){
                 <TouchableOpacity style={styles.button} onPress={goToCustomer}>
                     <Text style={styles.buttonText}>Customer</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button} onPress={() => console.log("Enviado")}>
+                <TouchableOpacity style={styles.button} onPress={goToUs}>
                     <Text style={styles.buttonText}>US</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button} onPress={goToLogin}>

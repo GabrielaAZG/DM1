@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.5,
         shadowRadius: 2,
         elevation: 2,
-        marginTop:500,
+        marginTop:10,
         alignItems:'center',
         marginEnd:-280
       },
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
         justifyContent:'space-around',
         alignItems:'center', 
         paddingBottom:10,
-        marginTop:-130
+        marginTop:10
     },
     Textbutton:{
         color:'black',

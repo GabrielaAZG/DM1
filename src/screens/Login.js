@@ -49,8 +49,8 @@ export default function Login(props){
                 <TextInput style={styles.inputp} placeholder="PASSWORD" value= {password} onChangeText={setPassword}/>
                 
             </View>
-            <View style={styles.container}>
-                <TouchableOpacity style={styles.button} onPress={authentication}>
+            <View style={[styles.container,styles.buttonText]}>
+                <TouchableOpacity style={[styles.button,styles.buttonText]} onPress={authentication}>
                     <Text>LOGIN</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button} onPress={exitApp}>
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     },
     input:{
         width:300,
-        height: 40,
+        height: 45,
         fontSize: 20,
         borderWidth:1,
         borderColor: '#ccc',
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     },
     inputp:{
         width:300,
-        height: 40,
+        height: 45,
         fontSize: 20,
         borderWidth:1,
         borderColor: '#ccc',
@@ -131,9 +131,9 @@ const styles = StyleSheet.create({
     },
     button: {
         backgroundColor: 'red',
-        paddingVertical: 10,
-        paddingHorizontal: 15,
-        borderRadius: 5,
+        paddingVertical: 15,
+        paddingHorizontal: 25,
+        borderRadius: 100,
         borderWidth: 0, // Ancho del borde
         borderColor: 'black', // Color del borde
         shadowColor: '#000', // Sombra para mejorar visibilidad en iOS
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
         elevation: 2,
         marginTop:10,
         alignItems:'center',
-        marginEnd:30
+        marginEnd:0
       },
       buttonText: {
         color: 'white',

@@ -6,6 +6,7 @@ import Customer from "../screens/Customer";
 import Order from "../screens/Order";
 import Menu from "../screens/Menu";
 import Orders from "../screens/Orders";
+import US from "../screens/US";
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +20,7 @@ export default function NavigationStack(){
             <Stack.Screen name="Order" component={Order}/> 
             <Stack.Screen name="Menu" component={Menu}/> 
             <Stack.Screen name="Orders" component={Orders}/> 
+            <Stack.Screen name="US" component={US}/> 
         </Stack.Navigator>
 
     );
